@@ -8,7 +8,6 @@ gerais
     box-sizing: border-box;
     font-family: sans-serif;
 }
-
 body {
     display: flex;
     height: 100vh;
@@ -28,25 +27,19 @@ seção container
     flex-direction: column;
     width: 80vw;
     max-width: 500px;
-    height: 90vh;
+    height: 95vh;
     border-radius: 20px;
-    /* background-color: white; */
     background-color: #2a2727;
     color: white;
     box-shadow: 0 0 150px white;
 }
 
 .container-box {
-    /* position: fixed;
-    top: 10%;
-    left: calc(50% - 100px); */
     margin: 5% auto 0;
 }
-
 .container-result {
-    margin: 5% auto 0;
+    margin: 3% auto 0;
 }
-
 .result {
     margin: 8px;
 }
@@ -57,6 +50,6 @@ footer
 
 .copy {
     position: fixed;
-    top: 87%;
+    top: 90%;
     left: calc(50% - 70px);
 }
