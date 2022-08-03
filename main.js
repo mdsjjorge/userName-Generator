@@ -9,21 +9,24 @@ const userNameGenerate = () => {
     let nameLength = fullName.value.split(' ').length;
 
     if (fullName.value.split(' ')[1] === undefined) {
-        almostThere.innerHTML = 'Quase lá ...';        
+
+        almostThere.innerHTML = 'Quase lá ...';      
+
     } else {
-        almostThere.innerHTML = ''
+
+        almostThere.innerHTML = '';
         // ----------- userName 1 -----------
         userName[0] = fullName.value.split(' ')[0];
 
         for (let i = 1; i < nameLength; i++) {
-            userName[0] += fullName.value.split(' ')[i][0];
+            userName[0] += fullName.value.trim().split(' ')[i][0];
         }
 
         // ----------- userName 2 -----------
         userName[1] = fullName.value.split(' ')[0][0];
 
         for (let i = 1; i < nameLength - 1; i++) {
-            userName[1] += fullName.value.split(' ')[i][0];
+            userName[1] += fullName.value.trim().split(' ')[i][0];
         }
 
         userName[1] += fullName.value.split(' ')[nameLength - 1];
@@ -76,3 +79,5 @@ const userNameGenerate = () => {
         }
     }
 }
+
+fullName.addEventListener('input', userNameGenerate);
