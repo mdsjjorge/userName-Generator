@@ -8,13 +8,15 @@ gerais
     box-sizing: border-box;
     font-family: sans-serif;
 }
+
 body {
     display: flex;
     height: 100vh;
     width: 100vw;
     justify-content: center;
     align-items: center;
-    background-color: #2a2727;
+    background-image: url("img/bg-2.jpg");
+    opacity: 80%;
 }
 
 /* ===================================
@@ -23,10 +25,38 @@ seção container
 
 .container {
     display: flex;
+    flex-direction: column;
     width: 80vw;
     max-width: 500px;
     height: 90vh;
-    border-radius: 20px;  
-    background-color: white;
-    flex-direction: column;
+    border-radius: 20px;
+    /* background-color: white; */
+    background-color: #2a2727;
+    color: white;
+    box-shadow: 0 0 150px white;
+}
+
+.container-box {
+    /* position: fixed;
+    top: 10%;
+    left: calc(50% - 100px); */
+    margin: 5% auto 0;
+}
+
+.container-result {
+    margin: 5% auto 0;
+}
+
+.clear {
+    margin: 8px;
+}
+
+/* ===================================
+footer
+=================================== */
+
+.copy {
+    position: fixed;
+    top: 87%;
+    left: calc(50% - 70px);
 }

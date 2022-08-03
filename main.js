@@ -21,49 +21,49 @@ const userNameGenerate = () => {
     let userName6;
     let userName7;
     let userName8;
-    
-    if (fullName.value.split(' ')[1] === undefined ) {
+
+    if (fullName.value.split(' ')[1] === undefined) {
         console.log("Por gentileza, coloque o nome completo.");
     } else {
 
         // ----------- userName 1 -----------
         userName1 = fullName.value.split(' ')[0];
 
-        for (let i = 1; i < nameLength; i++) {            
-            userName1 += fullName.value.split(' ')[i][0]; 
+        for (let i = 1; i < nameLength; i++) {
+            userName1 += fullName.value.split(' ')[i][0];
         }
 
         // ----------- userName 2 -----------
         userName2 = fullName.value.split(' ')[0][0];
 
-        for (let i = 1; i < nameLength - 1; i++) {            
-            userName2 += fullName.value.split(' ')[i][0]; 
+        for (let i = 1; i < nameLength - 1; i++) {
+            userName2 += fullName.value.split(' ')[i][0];
         }
         userName2 += fullName.value.split(' ')[nameLength - 1];
 
         // ----------- userName 3 -----------
-        userName3 = fullName.value.split(' ')[1].substring(0,3) + "_" +
-                    fullName.value.split(' ')[0].substring(0,3);
+        userName3 = fullName.value.split(' ')[1].substring(0, 3) + "_" +
+            fullName.value.split(' ')[0].substring(0, 3);
 
         // ----------- userName 4 -----------
-        userName4 = fullName.value.split(' ')[0].substring(0,3) + "_" +
-                    fullName.value.split(' ')[1].substring(0,3);
+        userName4 = fullName.value.split(' ')[0].substring(0, 3) + "_" +
+            fullName.value.split(' ')[1].substring(0, 3);
 
         // ----------- userName 5 -----------
         userName5 = fullName.value.split(' ')[0] + "." +
-                    fullName.value.split(' ')[1];
+            fullName.value.split(' ')[1];
 
         // ----------- userName 6 -----------
         userName6 = fullName.value.split(' ')[1] + "." +
-                    fullName.value.split(' ')[0];
+            fullName.value.split(' ')[0];
 
         // ----------- userName 7 -----------
-        userName7 = fullName.value.split(' ')[0].substring(0,5) + 
-                    fullName.value.split(' ')[1].substring(0,5);
+        userName7 = fullName.value.split(' ')[0].substring(0, 5) +
+            fullName.value.split(' ')[1].substring(0, 5);
 
         // ----------- userName 8 -----------
-        userName8 = fullName.value.split(' ')[1].substring(0,5) + 
-                    fullName.value.split(' ')[0].substring(0,5);
+        userName8 = fullName.value.split(' ')[1].substring(0, 5) +
+            fullName.value.split(' ')[0].substring(0, 5);
 
         result1.innerHTML = `1 - ${userName1}`
         result2.innerHTML = `2 - ${userName2}`
@@ -75,3 +75,25 @@ const userNameGenerate = () => {
         result8.innerHTML = `8 - ${userName8}`
     }
 }
+
+/*
+opc:
+var generate = function () {
+  var text = "";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  for (var i = 0; i < 8; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+  return text;
+};
+-----------------------------------------
+-----------------------------------------
+function generateUsername() {
+  var words = ['happy', 'sad', 'angry', 'lonely', 'crazy', 'cool', 'sexy', 'smart', 'stupid', 'ugly'];
+  var username = '';
+  for(var i = 0; i < 3; i++) {
+    username += words[Math.floor(Math.random() * words.length)];
+  }
+  return username;
+}
+
+*/
